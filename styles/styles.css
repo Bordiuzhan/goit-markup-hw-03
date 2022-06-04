@@ -31,13 +31,8 @@ button {
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-tex-color);
-  /* background-color: var(--bgc-basic-color); */
+  background-color: var(--bgc-basic-color);
   letter-spacing: 0.03em;
-  background-color: teal;
-}
-
-* {
-  outline: 2px solid tomato;
 }
 
 .list {
@@ -246,7 +241,7 @@ body {
   width: calc(100% / 3 -30px);
   margin-left: 30px;
 }
-/* <!-- Наша команда --> */
+/* <!-- team --> */
 .team {
   background-color: #f5f4fa;
   padding: 94px 0px;
@@ -341,6 +336,7 @@ body {
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
+  border-top: 1px solid #ececec;
 }
 
 .filter:hover,
@@ -376,19 +372,17 @@ body {
   color: var(--primary-tex-color);
 }
 
-/* .button {
-  cursor: pointer;
-} */
-
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.portfolio-foto {
-  margin-bottom: 20px;
+.portfolio-disc {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
 }
+
 .portfolio-title {
   margin-bottom: 4px;
 
