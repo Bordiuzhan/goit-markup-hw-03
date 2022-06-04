@@ -20,6 +20,10 @@ ul {
   padding-left: 0;
 }
 
+img {
+  display: block;
+}
+
 button {
   cursor: pointer;
 }
@@ -60,7 +64,15 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
+  margin-right: 93px;
+
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -73,6 +85,19 @@ body {
   color: var(--primary-tex-color);
 }
 
+.site-nav-list:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav .link-nav.current {
+  color: #2196f3;
+}
+
 .link-nav {
   font-weight: 500;
   font-size: 14px;
@@ -80,15 +105,31 @@ body {
   letter-spacing: 0.02em;
   color: #212121;
 }
-.site-nav .link-nav.current {
-  color: #2196f3;
-}
-.auth-nav {
+
+.header-nav {
+  display: flex;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.auth-nav.list {
+  display: flex;
+  align-items: center;
+}
+
+.auth-nav-list:not(:last-child) {
+  margin-right: 50px;
+}
+
 .auth-nav-link {
   color: var(--secondary-text-color);
 }
@@ -105,6 +146,7 @@ body {
 
 .hero-title {
   margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -115,7 +157,14 @@ body {
 }
 
 .hero-buton {
-  display: inline-block;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+
+  display: block;
+  margin: 0px auto;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -149,8 +198,21 @@ body {
   margin: -1px;
 }
 
+.specifics-list {
+  display: flex;
+}
+
+.specifics-card:not(:first-child) {
+  margin-left: 30px;
+}
+
+.specifics-list:not(:last-child) {
+  margin-left: 30px;
+}
+
 .specifics-title {
   margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -169,11 +231,22 @@ body {
 
 .occupation-title {
   margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
 
+.occupation-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.occupation-item {
+  width: calc(100% / 3 -30px);
+  margin-left: 30px;
+}
+/* <!-- Наша команда --> */
 .team {
   background-color: #f5f4fa;
   padding: 94px 0px;
@@ -181,18 +254,29 @@ body {
 
 .team-title {
   margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
 
-.team-foto {
-  display: inline-block;
-  margin-bottom: 30px;
+.team-list {
+  display: flex;
+  margin: -15px;
+}
+
+.team-item {
+  width: calc(100% / 4 -30px);
+  margin: 15px;
+}
+
+.team-text {
+  padding: 30px 30px;
 }
 
 .team-subtitle {
   margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -210,13 +294,15 @@ body {
 
 .footer {
   background-color: #2f303a;
+
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .footer-logo {
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
+
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -230,7 +316,6 @@ body {
 }
 
 .footer-address {
-  margin-bottom: 9px;
   font-size: 14px;
   line-height: 1.71;
   color: var(--bgc-basic-color);
@@ -243,6 +328,14 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-web {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-nav-link.link {
+  margin-top: 9px;
+}
 /*---------- main portfolio.html ----------*/
 
 .portfolio {
@@ -257,10 +350,24 @@ body {
 }
 
 .filter-list {
+  display: flex;
+  justify-content: center;
+
   margin-bottom: 50px;
 }
 
+.filter-items + .filter-items {
+  margin-left: 8px;
+}
+
 .filter-button {
+  min-width: 103px;
+  height: 38px;
+
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -272,12 +379,19 @@ body {
 /* .button {
   cursor: pointer;
 } */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .portfolio-foto {
-  display: inline-block;
   margin-bottom: 20px;
 }
 .portfolio-title {
   margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -287,10 +401,5 @@ body {
 .portfolio-subtitle {
   font-size: 16px;
   line-height: 1.87;
-  color: var(--secondary-text-color);
-}
-
-.footer-nav-link {
-  margin-bottom: 9px;
   color: var(--secondary-text-color);
 }
